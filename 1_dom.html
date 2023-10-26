@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Calculator</title>
+    <style>
+        .calculator {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input, button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Mini Calculator</h2>
+        <input type="number" id="num1" placeholder="Enter number 1">
+        <input type="number" id="num2" placeholder="Enter number 2">
+        <button id="add">Add</button>
+        <button id="subtract">Subtract</button>
+        <button id="divide">Divide</button>
+        <button id="multiply">Multiply</button>
+    </div>
+
+    <script>
+        // Function to perform addition
+        document.getElementById("add").addEventListener("click", function() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = num1 + num2;
+            alert("Result: " + result);
+        });
+
+        // Function to perform subtraction
+        document.getElementById("subtract").addEventListener("click", function() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = num1 - num2;
+            alert("Result: " + result);
+        });
+
+        // Function to perform division
+        document.getElementById("divide").addEventListener("click", function() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            if (num2 === 0) {
+                alert("Cannot divide by zero!");
+            } else {
+                var result = num1 / num2;
+                alert("Result: " + result);
+            }
+        });
+
+        // Function to perform multiplication
+        document.getElementById("multiply").addEventListener("click", function() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = num1 * num2;
+            alert("Result: " + result);
+        });
+    </script>
+</body>
+</html>

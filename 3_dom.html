@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Showing Alerts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showFirstName()">FIRSTNAME</button>
+    <button onclick="showLastName()">LASTNAME</button>
+    <button onclick="showFullName()">FIRSTNAME NAME</button>
+    <script type="text/javascript">
+        function showFirstName() {
+            var firstName = "YourFirstName"; 
+            alert("First Name: " + firstName);
+        }
+
+        function showLastName() {
+            var lastName = "YourLastName"; 
+            alert("Last Name: " + lastName);
+        }
+
+        function showFullName() {
+            var firstName = "YourFirstName"; 
+            var lastName = "YourLastName"; 
+            var fullName = firstName + " " + lastName;
+            alert("Full Name: " + fullName);
+        }
+    </script>
+</body>
+</html>
